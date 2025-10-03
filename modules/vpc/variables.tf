@@ -1,5 +1,5 @@
 variable "vpc_cidr" {
-  description = "VPC CIDR Block"
+  description = "CIDR block for the VPC"
   type        = string
 }
 
@@ -9,17 +9,17 @@ variable "vpc_name" {
 }
 
 variable "eip_private_ip" {
-  description = "Private IP for NAT Gateway EIP"
+  description = "Private IP for EIP (used with NAT)"
   type        = string
 }
 
 variable "public_subnets" {
-  description = "List of public subnet CIDRs"
+  description = "List of Public Subnet CIDRs"
   type        = list(string)
 }
 
 variable "private_subnets" {
-  description = "List of private subnet CIDRs"
+  description = "List of Private Subnet CIDRs"
   type        = list(string)
 }
 

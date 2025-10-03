@@ -3,6 +3,11 @@ variable "region" {
   description = "AWS Region"
 }
 
+variable "environment" {
+  description = "Environment name (dev/stg/prod)"
+  type        = string
+}
+
 variable "vpc_cidr" {
   default     = "192.168.0.0/16"
   description = "VPC CIDR Block"

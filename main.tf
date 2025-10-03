@@ -20,4 +20,5 @@ module "vpc" {
     priv2 = { cidr = var.private_subnet_2_cidr, az = "ap-south-1b" }
     priv3 = { cidr = var.private_subnet_3_cidr, az = "ap-south-1c" }
   }
+  environment = var.environment
 }

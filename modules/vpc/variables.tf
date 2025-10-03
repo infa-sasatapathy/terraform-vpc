@@ -1,18 +1,27 @@
-variable "region" {
-  description = "AWS Region"
-}
-
 variable "vpc_cidr" {
   description = "VPC CIDR Block"
+  type        = string
 }
 
-variable "public_subnet_1_cidr" {}
-variable "public_subnet_2_cidr" {}
-variable "public_subnet_3_cidr" {}
+variable "vpc_name" {
+  description = "Name of the VPC"
+  type        = string
+}
 
-variable "private_subnet_1_cidr" {}
-variable "private_subnet_2_cidr" {}
-variable "private_subnet_3_cidr" {}
+variable "eip_private_ip" {
+  description = "Private IP for NAT Gateway EIP"
+  type        = string
+}
+
+variable "public_subnets" {
+  description = "List of public subnet CIDRs"
+  type        = list(string)
+}
+
+variable "private_subnets" {
+  description = "List of private subnet CIDRs"
+  type        = list(string)
+}
 
 variable "environment" {
   description = "Environment name (dev/stg/prod)"

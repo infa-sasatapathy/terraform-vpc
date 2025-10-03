@@ -1,30 +1,20 @@
-variable "vpc_name" {
-  description = "Name tag for VPC"
-  type        = string
+variable "region" {
+  description = "AWS Region"
 }
 
 variable "vpc_cidr" {
-  description = "VPC CIDR block"
+  description = "VPC CIDR Block"
+}
+
+variable "public_subnet_1_cidr" {}
+variable "public_subnet_2_cidr" {}
+variable "public_subnet_3_cidr" {}
+
+variable "private_subnet_1_cidr" {}
+variable "private_subnet_2_cidr" {}
+variable "private_subnet_3_cidr" {}
+
+variable "environment" {
+  description = "Environment name (dev/stg/prod)"
   type        = string
-}
-
-variable "eip_private_ip" {
-  description = "Private IP for EIP association"
-  type        = string
-}
-
-variable "public_subnets" {
-  description = "Map of public subnets with CIDR and AZ"
-  type = map(object({
-    cidr = string
-    az   = string
-  }))
-}
-
-variable "private_subnets" {
-  description = "Map of private subnets with CIDR and AZ"
-  type = map(object({
-    cidr = string
-    az   = string
-  }))
 }

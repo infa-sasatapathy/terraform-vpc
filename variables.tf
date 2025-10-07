@@ -62,3 +62,9 @@ variable "environment" {
   description = "Environment name (dev/stg/prod)"
   type        = string
 }
+
+variable "vm-size" {
+  description = "EC2 Instance Type"
+  type        = string
+  default     = "t2.micro"
+}

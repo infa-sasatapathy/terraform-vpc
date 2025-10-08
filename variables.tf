@@ -13,6 +13,7 @@ variable "vpc_cidr" {
 variable "vpc_name" {
   description = "Name of the VPC"
   type        = string
+  default = "custom-vpc"
 }
 
 variable "eip_private_ip" {
